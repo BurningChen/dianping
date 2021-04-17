@@ -22,7 +22,6 @@ public class CategoryController {
     public CommonRes list(){
         List<CategoryModel> categoryModelList = categoryService.selectAll();
         return CommonRes.create(categoryModelList);
-
     }
 
 }

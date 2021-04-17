@@ -80,6 +80,7 @@ public class AdminController {
         if (StringUtils.isEmpty(email) || StringUtils.isEmpty(password)) {
             throw new BusinessException(EmBusinessError.PARAMETER_VALIDATION_ERROR, "用户名密码不能为空");
         }
+
         if(email.equals(this.email) && encodeByMd5(password).equals(this.encrptyPassord)){
             //登录成功
             httpServletRequest.getSession().setAttribute(CURRENT_ADMIN_SESSION,email);
